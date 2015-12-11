@@ -1,1 +1,6 @@
-Hello there
+<%= form_for @image do |f| %>
+  <%= f.file_field :image_upload %>
+
+  <%= f.label :image_dimensions, 'Image Dimensions' %>
+  <%= f.text_field :image_dimensions %>
+<% end %>
