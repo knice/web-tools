@@ -1,6 +1,13 @@
-<%= form_for @image do |f| %>
-  <%= f.file_field :image_upload %>
+<%= form_for @dimension do |f| %>
+  <h3>Upload Image</h3>
+  <%= f.file_field :image_upload %><br />
 
-  <%= f.label :image_dimensions, 'Image Dimensions' %>
-  <%= f.text_field :image_dimensions %>
+  <h3>Image Resize Dimensions</h3>
+  <%= f.label :image_width, 'Width: ' %>
+  <%= f.text_field :image_width %><br /><br />
+
+  <%= f.label :image_height, 'Height: ' %>
+  <%= f.text_field :image_height %><br /><br /><br />
+
+  <%= f.submit "Submit" %>
 <% end %>

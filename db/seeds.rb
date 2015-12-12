@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+DimensionPreset.create([
+    {
+      name: 'Background Image',
+      width: 1600,
+      height: 1200    
+    },
+    {
+      name: 'General Image',
+      width: 600,
+      height: 400
+    },
+    {
+      name: 'CTA Block Image',
+      width: 600,
+      height: 272
+    }
+  ])
