@@ -1,13 +1,32 @@
 <%= form_for @dimension do |f| %>
-  <h3>Upload Image</h3>
-  <%= f.file_field :image_upload %><br />
+  <div class="container upload-demo">
+    <h1 class="title">Simple Image Resizing</h1>
+    <div class="row">
+      <div class="six columns">
+        <div class="actions">
+          <h4>Upload &amp; Crop</h4>
+          <%= f.label :image_width, 'Width: ' %>
+          <%= f.number_field :image_width, value: 200, min: 0 %>
 
-  <h3>Image Resize Dimensions</h3>
-  <%= f.label :image_width, 'Width: ' %>
-  <%= f.text_field :image_width %><br /><br />
+          <%= f.label :image_height, 'Height: ' %>
+          <%= f.number_field :image_height, value: 200, min: 0 %><br /><br />
 
-  <%= f.label :image_height, 'Height: ' %>
-  <%= f.text_field :image_height %><br /><br /><br />
-
-  <%= f.submit "Submit" %>
+          <button class="file-btn">
+            <span>Upload</span>
+            <%= f.file_field :image_upload, {value: "Choose a file"} %>
+          </button>
+          <button class="upload-result">View Result</button>
+        </div>
+      </div>
+      <div class="six columns">
+        <div class="upload-msg">
+          Upload a file and set dimensions to start cropping
+        </div>
+        <div id="upload-demo"></div><br />
+      </div>
+    </div>
+    <div class="submit-wrapper">
+      <%= f.submit "Submit" %>
+    </div>
+  </div>
 <% end %>
