@@ -26,13 +26,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Image Resizing
 gem 'mini_magick'
 
-
 group :development, :test do
   # Pry
   gem 'pry-rails'
 
   # Better Errors
   gem "better_errors"
+
+  # Awesome Print
+  gem 'awesome_print'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
