@@ -9,8 +9,8 @@ class DimensionsController < ApplicationController
   def create
     @dimension = Dimension.new(dimension_params)
     @dimension.resize!
-
-    respond_with @dimension do |format|
+    
+    respond_to do |format|
       format.html { redirect_to dimensions_path, notice: "Your resized image is being downloaded." }
     end
   end
