@@ -30,7 +30,7 @@
     opacity: 0;
 }
 
-.submit-wrapper { text-align: center; }
+.submit-wrapper, .file-btn-wrapper, .result-btn-wrapper { text-align: center; }
 
 .actions { padding: 5px 0; }
 
@@ -45,6 +45,10 @@
 }
 .upload-demo.ready .upload-result {
     display: inline-block;
+}
+
+.actions {
+    margin: 50px auto;
 }
 
 .upload-msg {

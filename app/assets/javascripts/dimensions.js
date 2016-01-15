@@ -7,7 +7,6 @@ $(document).ready(function() {
     var $uploadCrop;
 
     this.newCroppie = function(e, ratio) {
-      // FIX THE WIDTH WITH YOUR CSS MEDIA QUERIES AND TAKE OFF FLOAT LEFT ON THE COLUMNS FOR MOBILE
       this.viewWidth = $('.upload-msg').width();
       this.viewHeight = ratio * parseInt(this.viewWidth, 10);
       console.log(this.viewWidth);
