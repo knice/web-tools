@@ -606,8 +606,8 @@
                 maxZoom = minZoom + 1;
             }
 
-            zoomer.min = parseFloat(minZoom).toFixed(2);
-            zoomer.max = parseFloat(maxZoom).toFixed(2);
+            zoomer.min = parseFloat(minZoom);
+            zoomer.max = parseFloat(maxZoom);
             initialZoom = (minZoom + maxZoom) / 2;
             _setZoomerVal.call(self, initialZoom);
             dispatchChange(zoomer);
