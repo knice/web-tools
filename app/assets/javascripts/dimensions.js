@@ -17,6 +17,7 @@ $(document).ready(function() {
 
             var ratio = (this.height * 1.0) / this.width
 
+            if($uploadCrop) $uploadCrop.destroy();
             $uploadCrop = Resize.newCroppie(e, ratio);
             $('.upload-croppie').addClass('ready');
           }
@@ -25,6 +26,9 @@ $(document).ready(function() {
         reader.readAsDataURL(input.files[0]);
 
         $("#resize-select").prop('disabled', false);
+        $(".upload-result").prop('disabled', false);
+        $(".submit-btn").prop('disabled', false);
+
       } else {
         alert("Sorry - you're browser doesn't support the FileReader API");
       }
