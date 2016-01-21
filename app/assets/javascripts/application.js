@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require croppie/croppie.js
+//= require sweetalert/sweetalert.min.js
 //= require_tree .

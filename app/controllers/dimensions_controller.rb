@@ -7,6 +7,7 @@ class DimensionsController < ApplicationController
   end
 
   def create
+    ap "HELLO THERE"
     @dimension = Dimension.new(dimension_params)
     @dimension.resize!
     

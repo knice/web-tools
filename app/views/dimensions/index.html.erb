@@ -1,5 +1,5 @@
 <%= form_for @dimension do |f| %>
-  <div class="container upload-demo">
+  <div class="container upload-croppie">
     <h1 class="title">Simple Image Resizing</h1>
     <div class="row">
       <div class="one-third column">
@@ -7,17 +7,25 @@
 
           <div class="file-btn-wrapper">
             <button class="file-btn">
-              <span>Upload</span>
+              <span>Upload Image</span>
               <%= f.file_field :image_upload, {value: "Choose a file"} %>
             </button>
+          </div><br />
+
+          <div class="resize-select-wrapper">
+            <label for="resize-select">Resize Image</label>
+            <%= select_tag "resize-select", options_for_select(["No Change", "25% Smaller", "50% Smaller", "75% Smaller"]), class: "u-full-width", disabled: true %>
           </div>
 
+        </div>
+          
+        <div class="row">
           <div class="result-btn-wrapper">
-            <button class="upload-result">View Result</button>
+            <button class="upload-result">Preview Result</button>
           </div>
-
+    
           <div class="submit-wrapper">
-            <%= f.submit "Submit" %>
+            <%= f.submit "Submit", class: "submit-btn" %>
           </div>
         </div>
       </div>
@@ -25,7 +33,7 @@
         <div class="upload-msg">
           Upload a file and set dimensions to start cropping
         </div>
-        <div id="upload-demo"></div><br />
+        <div id="upload-croppie"></div><br />
       </div>
     </div>
   </div>

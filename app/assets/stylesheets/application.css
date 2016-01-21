@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require croppie/croppie.css
+ *= require sweetalert/sweetalert.css
  *= require_tree ./../../../vendor/assets/stylesheets/skeleton-2.0.4
  *= require_tree .
  *= require_self
