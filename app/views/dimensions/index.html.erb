@@ -13,8 +13,9 @@
           </div><br />
 
           <div class="resize-select-wrapper">
-            <label for="resize-select">Resize Image</label>
-            <%= select_tag "resize-select", options_for_select(["No Change", "25% Smaller", "50% Smaller", "75% Smaller"]), class: "u-full-width", disabled: true %>
+            <label for="resize-select" class="resize-label">Resize Image</label>&nbsp;&nbsp;&nbsp;
+            <label class="resize-label sample-resolution"></label>
+            <%= select_tag "resize-select", options_for_select([["No Change", "100"], ["25% Smaller", "25"], ["50% Smaller", "50"], ["75% Smaller", "75"]]), class: "u-full-width", disabled: true %>
           </div>
 
         </div>

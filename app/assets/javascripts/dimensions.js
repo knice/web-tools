@@ -12,8 +12,9 @@ $(document).ready(function() {
           image.src = e.target.result;
 
           image.onload = function() {
-            console.log(this.width);
-            console.log(this.height);
+            this.imageWidth  = this.width;
+            this.imageHeight = this.height;
+            $(".sample-resolution").text(this.imageWidth + " x " + this.imageHeight);
 
             var ratio = (this.height * 1.0) / this.width
 
@@ -68,6 +69,7 @@ $(document).ready(function() {
     }
 
     this.popupResult = function(result) {
+      console.log(this.viewWidth);
       var html;
       if (result.html) {
         html = result.html;
@@ -82,9 +84,15 @@ $(document).ready(function() {
         allowOutsideClick: true
       });
     }
+
+    this.calculateResolution = function(result) {
+      console.log(result.value);
+    }
   }
 
   $(document).on('change', '#dimension_image_upload', function() { Resize.readFile(this); });
+
+  $(document).on('change', '#resize-select', function() { Resize.calculateResolution(this); });
 
   $(document).on('click', '.upload-result', function(event) { 
     Resize.showResult();
