@@ -85,24 +85,9 @@ $(document).ready(function() {
     }
 
     this.calculateResolution = function(result) {
-      switch(parseInt(result.value, 10)) {
-        case 25:
-          Resize.newResolution(this, 1);
-          break;
-        case 50:
-          Resize.newResolution(this, 2);
-          break;
-        case 75:
-          Resize.newResolution(this, 3);
-          break;
-        default:
-          Resize.newResolution(this, 4);
-      }
-    }
-
-    this.newResolution = function(self, val) {
-      Resize.imageWidth  = (self.originalWidth * val) / 4;
-      Resize.imageHeight = (self.originalHeight * val) / 4;
+      var val = parseInt(result.value, 10);
+      Resize.imageWidth  = (this.originalWidth * val) / 4;
+      Resize.imageHeight = (this.originalHeight * val) / 4;
       $(".sample-resolution").text(Resize.imageWidth + " x " + Resize.imageHeight);
     }
   }
