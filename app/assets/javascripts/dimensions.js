@@ -12,9 +12,9 @@ $(document).ready(function() {
           image.src = e.target.result;
 
           image.onload = function() {
-            this.imageWidth  = this.width;
-            this.imageHeight = this.height;
-            $(".sample-resolution").text(this.imageWidth + " x " + this.imageHeight);
+            Resize.originalWidth = Resize.imageWidth  = this.width;
+            Resize.originalHeight = Resize.imageHeight = this.height;
+            $(".sample-resolution").text(Resize.imageWidth + " x " + Resize.imageHeight);
 
             var ratio = (this.height * 1.0) / this.width
 
@@ -36,7 +36,6 @@ $(document).ready(function() {
     }
 
     this.showResult = function(input) {
-      console.log($uploadCrop.get().points);
       $uploadCrop.result({
         type: 'canvas', 
         size: 'viewport'
@@ -86,7 +85,25 @@ $(document).ready(function() {
     }
 
     this.calculateResolution = function(result) {
-      console.log(result.value);
+      switch(parseInt(result.value, 10)) {
+        case 25:
+          Resize.newResolution(this, 1);
+          break;
+        case 50:
+          Resize.newResolution(this, 2);
+          break;
+        case 75:
+          Resize.newResolution(this, 3);
+          break;
+        default:
+          Resize.newResolution(this, 4);
+      }
+    }
+
+    this.newResolution = function(self, val) {
+      Resize.imageWidth  = (self.originalWidth * val) / 4;
+      Resize.imageHeight = (self.originalHeight * val) / 4;
+      $(".sample-resolution").text(Resize.imageWidth + " x " + Resize.imageHeight);
     }
   }
 
