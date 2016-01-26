@@ -1,0 +1,111 @@
+.container {
+  position: relative;
+  max-width: 1270px;
+  margin: 0 auto;
+  min-width: 500px;
+  padding: 0 10px;
+}
+
+.container .title { text-align: center; }
+
+.file-btn { position: relative; }
+
+.file-btn input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.submit-wrapper, .file-btn-wrapper, .result-btn-wrapper { text-align: center; }
+
+.submit-wrapper, .result-btn-wrapper { display: inline-block; }
+
+.actions { padding: 5px 0; }
+
+.upload-croppie #upload-croppie,
+.upload-croppie.ready .upload-msg {
+  display: none;
+}
+
+.upload-croppie .upload-result,
+.upload-croppie .submit-btn {
+  background-color: #CBCAC5;
+}
+
+.upload-croppie .upload-result:hover,
+.upload-croppie .submit-btn:hover {
+  border-color: #BBB;
+  color: #555;
+}
+
+.upload-croppie #user-width,
+.upload-croppie #user-height,
+.upload-croppie #resize-select {
+  background-color: #CBCAC5;
+}
+
+.upload-croppie.ready .upload-result { background-color: #FFF; }
+
+.upload-croppie.ready .upload-result:hover {
+  border-color: #888;
+  color: #333;
+}
+
+.upload-croppie.ready #user-width,
+.upload-croppie.ready #user-height,
+.upload-croppie.ready #resize-select {
+  background-color: #FFF;
+}
+
+.upload-croppie.ready .submit-btn {
+  color: #FFF;
+  background-color: #A82439;
+}
+
+.upload-croppie.ready #upload-croppie { display: block; }
+
+.upload-croppie.ready .upload-result { display: inline-block; }
+
+.sample-resolution {
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.upload-msg {
+  text-align: center;
+  padding: 50px;
+  font-size: 22px;
+  color: #aaa;
+  margin: 50px auto;
+  border: 1px solid #aaa;
+  width: 300px;
+}
+
+.sweet-alert { width: 85%; }
+.sweet-alert button { padding: 0 30px; }
+
+@media (min-width: 550px) {
+  
+  .container { width: 90%; }
+  .u-full-width { width: 95%; }
+  .upload-msg { width: 300px; }
+  .sweet-alert { left: 40%; }
+
+  .file-btn-wrapper, .result-btn-wrapper {
+    text-align: left;
+  }
+}
+
+@media (min-width: 750px) {
+  .upload-msg { width: 500px; }
+  .sweet-alert { left: 30%; }
+}
+
+@media (min-width: 1000px) {
+  .container { width: 100%; }
+  .upload-msg { width: 700px; }
+  .sweet-alert { left: 20%; }
+}
