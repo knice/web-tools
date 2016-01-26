@@ -2,40 +2,50 @@
   <div class="container upload-croppie">
     <h1 class="title">Simple Image Resizing</h1>
     <div class="row">
-      <div class="one-third column">
-        <div class="actions">
+      <div class="actions">
 
-          <div class="file-btn-wrapper">
-            <button class="file-btn">
-              <span>Upload Image</span>
-              <%= f.file_field :image_upload, {value: "Choose a file"} %>
-            </button>
-          </div><br />
+        <div class="five columns">
+          <div class="row">
+            <div class="file-btn-wrapper">
+              <button class="file-btn">
+                <span>Upload Image</span>
+                <%= f.file_field :image_upload, {value: "Choose a file"} %>
+              </button>
+            </div><br />
 
-          <div class="resize-select-wrapper">
-            <label for="resize-select" class="resize-label">Resize Image</label>&nbsp;&nbsp;&nbsp;
-            <label class="resize-label sample-resolution"></label>
-            <%= select_tag "resize-select", options_for_select([["No Change", "4"], ["25% Smaller", "1"], ["50% Smaller", "2"], ["75% Smaller", "3"]]), class: "u-full-width", disabled: true %>
-          </div>
-
-        </div>
+            <div class="result-btn-wrapper">
+              <button class="upload-result" disabled="true">Preview Result</button>
+            </div>
           
-        <div class="row">
-          <div class="result-btn-wrapper">
-            <button class="upload-result" disabled="true">Preview Result</button>
+            <div class="submit-wrapper">
+              <%= f.submit "Submit", class: "submit-btn", disabled: true %>
+            </div>
           </div>
-    
-          <div class="submit-wrapper">
-            <%= f.submit "Submit", class: "submit-btn", disabled: true %>
+        </div>
+        
+        <div class="seven columns">
+          <div class="resize-select-wrapper">
+            <label for="resize-select">Resize Image</label>
+            <select name="resize-select" id="resize-select" class="u-full-width" disabled="true">
+              <option disabled selected> -- select an option -- </option>
+              <option data-dimensions='{"width":"960", "height":"540"}'>Carousel Image</option>
+              <option data-dimensions='{"width":"120", "height":"150"}'>Personnel Table Image</option>
+              <option data-dimensions='{"width":"200", "height":"150"}'>Funnels Image</option>
+            </select>
+          </div>
+
+          <div class="row">
+              <input id="user-width" disabled="true" type="number" placeholder="Custom Width" name="width">
+              <input id="user-height" disabled="true" type="number" placeholder="Custom Height" name="height">
           </div>
         </div>
       </div>
-      <div class="two-thirds column">
-        <div class="upload-msg">
-          Upload a file and set dimensions to start cropping
-        </div>
-        <div id="upload-croppie"></div><br />
+    </div>
+    <div class="row">
+      <div class="upload-msg">
+        Upload a file and set dimensions to start cropping
       </div>
+      <div id="upload-croppie"></div><br />
     </div>
   </div>
 <% end %>

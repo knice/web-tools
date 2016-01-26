@@ -1,35 +1,39 @@
 $(document).ready(function() {
   var Resize = new function() {
 
-    var $uploadCrop;
+    var $uploadCrop, $uploadedImage;
 
     this.readFile = function(input) {
       if(input.files && input.files[0]) {
         var reader = new FileReader();
 
         reader.onload = function(e) {
-          var image = new Image();
-          image.src = e.target.result;
+          $uploadedImage = new Image();
+          $uploadedImage.src = e.target.result;
 
-          image.onload = function() {
+          $uploadedImage.onload = function() {
             Resize.originalWidth = Resize.imageWidth  = this.width;
             Resize.originalHeight = Resize.imageHeight = this.height;
-            $(".sample-resolution").text(Resize.imageWidth + " x " + Resize.imageHeight);
 
             var ratio = (this.height * 1.0) / this.width
 
             if($uploadCrop) $uploadCrop.destroy();
-            $uploadCrop = Resize.newCroppie(e, ratio);
+
+            Resize.viewPortWidth = $('.upload-msg').width();
+            Resize.viewPortHeight = ratio * parseInt(Resize.viewPortWidth, 10);
+
+            $uploadCrop = Resize.newCroppie();
+
             $('.upload-croppie').addClass('ready');
+            $("#resize-select").prop('disabled', false);
+            $(".upload-result").prop('disabled', false);
+            $(".submit-btn").prop('disabled', false);
+            $("#user-width").prop('disabled', false).prop('max', Resize.originalWidth);
+            $("#user-height").prop('disabled', false).prop('max', Resize.originalHeight);
           }
         }
 
         reader.readAsDataURL(input.files[0]);
-
-        $("#resize-select").prop('disabled', false);
-        $(".upload-result").prop('disabled', false);
-        $(".submit-btn").prop('disabled', false);
-
       } else {
         alert("Sorry - you're browser doesn't support the FileReader API");
       }
@@ -46,29 +50,39 @@ $(document).ready(function() {
       });
     }
 
-    this.newCroppie = function(e, ratio) {
-      this.viewWidth = $('.upload-msg').width();
-      this.viewHeight = ratio * parseInt(this.viewWidth, 10);
-
+    this.newCroppie = function() {
       var croppie = new Croppie(document.getElementById('upload-croppie'), {
         viewport: {
-          width: this.viewWidth,
-          height: this.viewHeight
+          width: Resize.viewPortWidth,
+          height: Resize.viewPortHeight
         },
         boundary: {
-          width: parseInt(this.viewWidth, 10) + 100,
-          height: parseInt(this.viewHeight, 10) + 100
+          width: parseInt(Resize.viewPortWidth, 10) + 100,
+          height: parseInt(Resize.viewPortHeight, 10) + 100
         }
       });
       croppie.bind({
-        url: e.target.result
+        url: $uploadedImage.src
       });
-
       return croppie;
     }
 
+    this.fillDimensionFields = function(self) {
+      var data = $('#resize-select').find(':selected').data('dimensions');
+      $("#user-width").val(data.width);
+      $("#user-height").val(data.height);
+      Resize.resizeCroppie();
+    }
+
+    this.resizeCroppie = function() {
+      if ($("#user-width").val()) Resize.viewPortWidth  = parseInt($("#user-width").val());
+      if ($("#user-height").val()) Resize.viewPortHeight = parseInt($("#user-height").val());
+
+      if($uploadCrop) $uploadCrop.destroy();
+      $uploadCrop = Resize.newCroppie();
+    }
+
     this.popupResult = function(result) {
-      console.log(this.viewWidth);
       var html;
       if (result.html) {
         html = result.html;
@@ -83,18 +97,14 @@ $(document).ready(function() {
         allowOutsideClick: true
       });
     }
-
-    this.calculateResolution = function(result) {
-      var val = parseInt(result.value, 10);
-      Resize.imageWidth  = (this.originalWidth * val) / 4;
-      Resize.imageHeight = (this.originalHeight * val) / 4;
-      $(".sample-resolution").text(Resize.imageWidth + " x " + Resize.imageHeight);
-    }
   }
 
   $(document).on('change', '#dimension_image_upload', function() { Resize.readFile(this); });
-
-  $(document).on('change', '#resize-select', function() { Resize.calculateResolution(this); });
+  $(document).on('change', '#resize-select', function() { Resize.fillDimensionFields(this); })
+  $(document).on('change', '#user-width, #user-height', function() { 
+    Resize.resizeCroppie();
+    $("#resize-select").val($("#resize-select option:first").val());
+  })
 
   $(document).on('click', '.upload-result', function(event) { 
     Resize.showResult();
