@@ -84,7 +84,10 @@
   width: 300px;
 }
 
-.sweet-alert { width: 85%; }
+.sweet-alert { 
+  width: 85%;
+  margin-top: -250px;
+}
 .sweet-alert button { padding: 0 30px; }
 
 @media (min-width: 550px) {
@@ -99,13 +102,24 @@
   }
 }
 
+@media (min-width: 650px) {
+  .sweet-alert { left: 35%; }
+}
+
 @media (min-width: 750px) {
   .upload-msg { width: 500px; }
-  .sweet-alert { left: 30%; }
 }
 
 @media (min-width: 1000px) {
   .container { width: 100%; }
   .upload-msg { width: 700px; }
+  .sweet-alert { left: 30%; }
+}
+
+@media (min-width: 1100px) {
+  .sweet-alert { left: 25%; }
+}
+
+@media (min-width: 1600px) {
   .sweet-alert { left: 20%; }
 }
