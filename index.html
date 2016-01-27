@@ -16,21 +16,17 @@
   </head>
   <body>
     <div class="container upload-croppie">
-      <h1 class="title">Simple Image Resizing</h1>
       <div class="row">
         <div class="actions">
 
           <div class="five columns">
             <div class="row">
+              <h1 class="title">Chapman Image Resizing</h1>
               <div class="file-btn-wrapper">
                 <button class="file-btn">
                   <span>Upload Image</span>
                   <input value="Choose a file" type="file" id="dimension_image_upload">
                 </button>
-              </div><br />
-
-              <div class="result-btn-wrapper">
-                <button class="upload-result" disabled="true">Preview Result</button>
               </div>
             
               <div class="submit-wrapper">
@@ -41,18 +37,17 @@
           
           <div class="seven columns">
             <div class="resize-select-wrapper">
-              <label for="resize-select">Resize Image</label>
               <select name="resize-select" id="resize-select" class="u-full-width" disabled="true">
-                <option disabled selected> -- select an option -- </option>
-                <option data-dimensions='{"width":"960", "height":"540"}'>Carousel Image</option>
-                <option data-dimensions='{"width":"120", "height":"150"}'>Personnel Table Image</option>
-                <option data-dimensions='{"width":"200", "height":"150"}'>Funnels Image</option>
+                <option disabled selected> -- Select a Preset Option -- </option>
               </select>
             </div>
 
             <div class="row">
                 <input id="user-width" disabled="true" type="number" placeholder="Custom Width" name="width">
                 <input id="user-height" disabled="true" type="number" placeholder="Custom Height" name="height">
+                <div class="result-btn-wrapper">
+                  <button class="upload-result" disabled="true">Preview Result</button>
+                </div>
             </div>
           </div>
         </div>

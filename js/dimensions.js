@@ -15,7 +15,7 @@ $(document).ready(function() {
             Resize.originalWidth = Resize.imageWidth  = this.width;
             Resize.originalHeight = Resize.imageHeight = this.height;
 
-            var ratio = (this.height * 1.0) / this.width
+            var ratio = (this.height * 1.0) / this.width;
 
             if($uploadCrop) $uploadCrop.destroy();
 
@@ -69,9 +69,14 @@ $(document).ready(function() {
 
     this.fillDimensionFields = function(self) {
       var data = $('#resize-select').find(':selected').data('dimensions');
-      $("#user-width").val(data.width);
-      $("#user-height").val(data.height);
-      Resize.resizeCroppie();
+      if(data.width <= Resize.originalWidth && data.height <= Resize.originalHeight){
+        $("#user-width").val(data.width);
+        $("#user-height").val(data.height);
+        Resize.resizeCroppie();
+      } else {
+        alert("Your image is too small for the preset you have selected.");
+        $("#resize-select").val($("#resize-select option:first").val());
+      }
     }
 
     this.resizeCroppie = function() {
@@ -100,12 +105,23 @@ $(document).ready(function() {
   }
 
   $.getJSON("options.json", function(json) {
-    console.log(json);
+    var html = "";
+    for(var group in json){
+      html += "<optgroup label='" + group + "'>";
+      for(var option in json[group]){
+        html += "<option data-dimensions='" + JSON.stringify(json[group][option]) + "'>" + option + "</option>";
+      }
+      html += "</optgroup>";
+    }
+
+    document.getElementById("resize-select").innerHTML += html;
   });
 
   $(document).on('change', '#dimension_image_upload', function() { Resize.readFile(this); });
   $(document).on('change', '#resize-select', function() { Resize.fillDimensionFields(this); });
-  $(document).on('change', '#user-width, #user-height', function() { 
+  $(document).on('change', '#user-width, #user-height', function() {
+    if($("#user-width").val() > Resize.originalWidth) $("#user-width").val(Resize.originalWidth);
+    if($("#user-height").val() > Resize.originalHeight) $("#user-height").val(Resize.originalHeight);
     Resize.resizeCroppie();
     $("#resize-select").val($("#resize-select option:first").val());
   });

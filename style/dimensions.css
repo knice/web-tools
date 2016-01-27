@@ -6,7 +6,10 @@
   padding: 0 10px;
 }
 
-.container .title { text-align: center; }
+.title { 
+  text-align: left;
+  font-size: 4rem;
+}
 
 .file-btn { position: relative; }
 
@@ -19,9 +22,12 @@
   opacity: 0;
 }
 
-.submit-wrapper, .file-btn-wrapper, .result-btn-wrapper { text-align: center; }
+.submit-wrapper, .file-btn-wrapper, .result-btn-wrapper {
+  text-align: center;
+  display: inline-block;
+}
 
-.submit-wrapper, .result-btn-wrapper { display: inline-block; }
+.resize-select-wrapper { margin-top: 25px; }
 
 .actions { padding: 5px 0; }
 
