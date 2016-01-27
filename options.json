@@ -1,0 +1,124 @@
+{
+  "Cascade": {
+    "Right Callout": {
+      "width": "206",
+      "height": ""
+    },
+   "Primary WYSIWYG General": {
+      "width": "206",
+      "height": ""
+    },
+    "Primary Carousel Region": {
+      "width": "960",
+      "height": "540"
+    },
+    "Primary Personnel Region": {
+      "width": "120",
+      "height": "150"
+    },
+    "Primary Funnel 1up": {
+      "width": "200",
+      "height": "150"
+    },
+    "Primary Funnel 2up": {
+      "width": "290",
+      "height": "125"
+    },
+    "Primary & Right Sponsor Box": {
+      "width": "114",
+      "height": "110"
+    },
+    "Primary & Left Featured Area": {
+      "width": "125",
+      "height": "135"
+    },
+    "Masthead Slider": {
+      "width": "1130",
+      "height": "440"
+    },
+    "Masthead Boxes": {
+      "width": "266",
+      "height": "220"
+    },
+    "Masthead Branded": {
+      "width": "1130",
+      "height": "220"
+    }
+  },
+  "Events": {
+    "Masthead": {
+      "width": "980",
+      "height": "350"
+    },
+    "Description": {
+      "width": "",
+      "height": "206"
+    }
+  },
+  "Digital Signage": {
+    "Background Image": {
+      "width": "1920",
+      "height": "1080"
+    },
+    "Foreground Image": {
+      "width": "912",
+      "height": "1080"
+    },
+    "WYSIWYG Area": {
+      "width": "206",
+      "height": "206"
+    }
+  },
+  "Email": {
+    "Updates Email Image": {
+      "width": "270",
+      "height": "200"
+    }
+  },
+  "Facebook": {
+    "Cover Photo": {
+      "width": "851",
+      "height": "315"
+    },
+    "Profile Picture": {
+      "width": "180",
+      "height": "180"
+    },
+    "Image": {
+      "width": "1200",
+      "height": "1200"
+    },
+    "Link Image": {
+      "width": "1200",
+      "height": "627"
+    }
+  },
+  "Twitter": {
+    "Header": {
+      "width": "1500",
+      "height": "500"
+    },
+    "Profile": {
+      "width": "400",
+      "height": "400"
+    },
+    "Shared Photo": {
+      "width": "1024",
+      "height": "512"
+    }
+  },
+  "Instagram": {
+    "Profile": {
+      "width": "161",
+      "height": "161"
+    },
+    "Square": {
+      "width": "612",
+      "height": "612"
+    },
+    "Landscape": {
+      "width": "612",
+      "height": ""
+    }
+  }
+}

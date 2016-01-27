@@ -35,7 +35,7 @@ $(document).ready(function() {
 
         reader.readAsDataURL(input.files[0]);
       } else {
-        alert("Sorry - you're browser doesn't support the FileReader API");
+        alert("Unless you pressed cancel, your browser doesn't support the FileReader API");
       }
     }
 
@@ -98,6 +98,10 @@ $(document).ready(function() {
       });
     }
   }
+
+  $.getJSON("options.json", function(json) {
+    console.log(json);
+  });
 
   $(document).on('change', '#dimension_image_upload', function() { Resize.readFile(this); });
   $(document).on('change', '#resize-select', function() { Resize.fillDimensionFields(this); });
