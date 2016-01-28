@@ -19,7 +19,7 @@ $(document).ready(function() {
 
             if($uploadCrop) $uploadCrop.destroy();
 
-            Resize.viewPortWidth = $('.upload-msg').width();
+            Resize.viewPortWidth = Resize.imageWidth < $('.upload-msg').width() ? Resize.imageWidth : $('.upload-msg').width();
             Resize.viewPortHeight = ratio * parseInt(Resize.viewPortWidth, 10);
 
             $uploadCrop = Resize.newCroppie();
