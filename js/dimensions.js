@@ -44,18 +44,10 @@ $(document).ready(function() {
         type: 'canvas', 
         size: 'viewport'
       }).then(function(img) {
+        $(".download-crop").prop('href', img);
         Resize.popupResult({
           src: img
-        })
-      });
-    }
-
-    this.downloadableResult = function() {
-      $uploadCrop.result({
-        type: 'canvas',
-        size: 'viewport'
-      }).then(function(img) {
-        $(".submit-btn").prop('href', img);
+        });
       });
     }
 
@@ -103,12 +95,21 @@ $(document).ready(function() {
       }
       if (result.src) {
         html = '<img src="' + result.src + '" />';
+        html += '<a href="' + result.src + '" style="display:none; id="download-crop" download="cropped-image.png"></a>';
       }
       swal({
         title: 'Your Cropped Image Preview',
         html: true,
         text: html,
-        allowOutsideClick: true
+        allowOutsideClick: true,
+        showCancelButton: true,
+        cancelButtonText: "Back",
+        confirmButtonColor: "#A82439",
+        confirmButtonText: "Download"
+      },
+      function(){
+        $(".download-crop")[0].click();
+        location.reload();
       });
     }
   }

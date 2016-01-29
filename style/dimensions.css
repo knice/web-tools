@@ -22,12 +22,14 @@
   opacity: 0;
 }
 
-.submit-wrapper, .file-btn-wrapper, .result-btn-wrapper {
+.file-btn-wrapper, .result-btn-wrapper {
   text-align: center;
   display: inline-block;
 }
 
 .resize-select-wrapper { margin-top: 25px; }
+
+.download-crop { display: none; }
 
 .actions {
   margin: auto;
@@ -40,13 +42,9 @@
   display: none;
 }
 
-.upload-croppie .preview-result,
-.upload-croppie .submit-btn {
-  background-color: #CBCAC5;
-}
+.upload-croppie .preview-result { background-color: #CBCAC5; }
 
-.upload-croppie .preview-result:hover,
-.upload-croppie .submit-btn:hover {
+.upload-croppie .preview-result:hover {
   border-color: #BBB;
   color: #555;
 }
@@ -68,11 +66,6 @@
 .upload-croppie.ready #user-height,
 .upload-croppie.ready #resize-select {
   background-color: #FFF;
-}
-
-.upload-croppie.ready .submit-btn {
-  color: #FFF;
-  background-color: #A82439;
 }
 
 .upload-croppie.ready #upload-croppie { display: block; }
@@ -99,6 +92,8 @@
   margin-top: -250px;
 }
 .sweet-alert button { padding: 0 30px; }
+.sweet-alert button:focus { color: #FFF; }
+.sweet-alert button:hover { color: #333; }
 
 @media (min-width: 550px) {
   
