@@ -55,20 +55,6 @@
       "height": "206"
     }
   },
-  "Digital Signage": {
-    "Background Image": {
-      "width": "1920",
-      "height": "1080"
-    },
-    "Foreground Image": {
-      "width": "912",
-      "height": "1080"
-    },
-    "WYSIWYG Area": {
-      "width": "206",
-      "height": "206"
-    }
-  },
   "Email": {
     "Updates Email Image": {
       "width": "270",

@@ -24,10 +24,10 @@ $(document).ready(function() {
 
             $uploadCrop = Resize.newCroppie();
 
-            $('.upload-croppie').addClass('ready');
+            $(".upload-croppie").addClass('ready');
             $("#resize-select").prop('disabled', false);
-            $(".upload-result").prop('disabled', false);
-            $(".submit-btn").prop('disabled', false);
+            $(".preview-result").prop('disabled', false);
+            $(".submit-btn").prop('href', '#');
             $("#user-width").prop('disabled', false).prop('max', Resize.originalWidth);
             $("#user-height").prop('disabled', false).prop('max', Resize.originalHeight);
           }
@@ -39,7 +39,7 @@ $(document).ready(function() {
       }
     }
 
-    this.showResult = function(input) {
+    this.showResult = function() {
       $uploadCrop.result({
         type: 'canvas', 
         size: 'viewport'
@@ -47,6 +47,15 @@ $(document).ready(function() {
         Resize.popupResult({
           src: img
         })
+      });
+    }
+
+    this.downloadableResult = function() {
+      $uploadCrop.result({
+        type: 'canvas',
+        size: 'viewport'
+      }).then(function(img) {
+        $(".submit-btn").prop('href', img);
       });
     }
 
@@ -119,15 +128,14 @@ $(document).ready(function() {
 
   $(document).on('change', '#dimension_image_upload', function() { Resize.readFile(this); });
   $(document).on('change', '#resize-select', function() { Resize.fillDimensionFields(this); });
+  $(document).on('click', '.preview-result', function() { Resize.showResult(); });
   $(document).on('change', '#user-width, #user-height', function() {
     if($("#user-width").val() > Resize.originalWidth) $("#user-width").val(Resize.originalWidth);
     if($("#user-height").val() > Resize.originalHeight) $("#user-height").val(Resize.originalHeight);
     Resize.resizeCroppie();
     $("#resize-select").val($("#resize-select option:first").val());
   });
-
-  $(document).on('click', '.upload-result', function(event) { 
-    Resize.showResult();
-    event.preventDefault();
-  });
+  $(document).on('click', '.submit-btn', function(event) {
+    Resize.downloadableResult();
+  })
 });

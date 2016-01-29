@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  max-width: 1270px;
+  max-width: 2000px;
   margin: 0 auto;
   min-width: 500px;
   padding: 0 10px;
@@ -29,19 +29,23 @@
 
 .resize-select-wrapper { margin-top: 25px; }
 
-.actions { padding: 5px 0; }
+.actions {
+  margin: auto;
+  padding: 5px 0;
+  max-width: 1270px;
+}
 
 .upload-croppie #upload-croppie,
 .upload-croppie.ready .upload-msg {
   display: none;
 }
 
-.upload-croppie .upload-result,
+.upload-croppie .preview-result,
 .upload-croppie .submit-btn {
   background-color: #CBCAC5;
 }
 
-.upload-croppie .upload-result:hover,
+.upload-croppie .preview-result:hover,
 .upload-croppie .submit-btn:hover {
   border-color: #BBB;
   color: #555;
@@ -53,9 +57,9 @@
   background-color: #CBCAC5;
 }
 
-.upload-croppie.ready .upload-result { background-color: #FFF; }
+.upload-croppie.ready .preview-result { background-color: #FFF; }
 
-.upload-croppie.ready .upload-result:hover {
+.upload-croppie.ready .preview-result:hover {
   border-color: #888;
   color: #333;
 }
@@ -73,7 +77,7 @@
 
 .upload-croppie.ready #upload-croppie { display: block; }
 
-.upload-croppie.ready .upload-result { display: inline-block; }
+.upload-croppie.ready .preview-result { display: inline-block; }
 
 .sample-resolution {
   font-weight: 100;
