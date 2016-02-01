@@ -24,12 +24,11 @@ $(document).ready(function() {
 
             $uploadCrop = Resize.newCroppie();
 
-            $(".upload-croppie").addClass('ready');
-            $("#resize-select").prop('disabled', false);
-            $(".preview-result").prop('disabled', false);
             $(".submit-btn").prop('href', '#');
-            $("#user-width").prop('disabled', false).prop('max', Resize.originalWidth);
-            $("#user-height").prop('disabled', false).prop('max', Resize.originalHeight);
+            $(".preview-result").css('display', 'inline-block');
+            $("#resize-select").css('display', 'inline-block');
+            $("#user-width").css('display', 'inline-block').prop('max', Resize.originalWidth);
+            $("#user-height").css('display', 'inline-block').prop('max', Resize.originalHeight);
           }
         }
 
@@ -98,7 +97,7 @@ $(document).ready(function() {
         html += '<a href="' + result.src + '" style="display:none; id="download-crop" download="cropped-image.png"></a>';
       }
       swal({
-        title: 'Your Cropped Image Preview',
+        title: 'Your Cropped Image',
         html: true,
         text: html,
         allowOutsideClick: true,
