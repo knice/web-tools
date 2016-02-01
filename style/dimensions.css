@@ -25,9 +25,7 @@ button {
   font-size: 4rem;
 }
 
-.description {
-  text-align: center;
-}
+.description { text-align: center; }
 
 .file-btn { position: relative; }
 
@@ -40,16 +38,13 @@ button {
   opacity: 0;
 }
 
+
 .file-btn-wrapper, .result-btn-wrapper {
   text-align: center;
-  display: inline-block;
   margin: auto;
 }
 
-.resize-select-wrapper { 
-  margin-top: 25px;
-  display: inline-block;
-}
+.resize-select-wrapper { display: inline-block; }
 
 .download-crop { display: none; }
 
@@ -60,9 +55,14 @@ button {
   text-align: center;
 }
 
+.upload-croppie .preview-result {
+  background-color: #A82439;
+  color: #FFF;
+}
+
 .upload-croppie .preview-result:hover {
   border-color: #888;
-  color: #333;
+  /*color: #333;*/
 }
 
 .upload-croppie #user-width,
@@ -81,8 +81,6 @@ button {
 
 .upload-croppie #upload-croppie { display: block; }
 
-.upload-croppie.ready .preview-result { display: inline-block; }
-
 .upload-msg { width: 300px; }
 
 .sweet-alert { 
@@ -92,17 +90,16 @@ button {
 .sweet-alert button { padding: 0 30px; }
 .sweet-alert button:focus { color: #FFF; }
 .sweet-alert button:hover { color: #333; }
+.sweet-alert ul {
+  text-align: left;
+  display: inline-block;
+}
 
 @media (min-width: 550px) {
-  
   .container { width: 90%; }
   .u-full-width { width: 95%; }
   .upload-msg { width: 300px; }
   .sweet-alert { left: 40%; }
-
-  /*.file-btn-wrapper, .result-btn-wrapper {
-    text-align: left;
-  }*/
 }
 
 @media (min-width: 650px) {

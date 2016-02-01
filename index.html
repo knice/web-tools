@@ -49,22 +49,18 @@
     </nav>
     <div class="container upload-croppie">
       <h1 class="title">Chapman Image Resizing</h1>
-      <p class="description">Your one stop shop for all things related to image resizing on the Chapman University website network</p>
       <div class="row actions">
+        <p class="description">This tool is designed to help you resize and crop your images so that they look great in the many places they can appear on Chapman websites. <a id="instructions" href="#">Click for instructions.</a></p>
+        
         <div class="row">
+          <a class="download-crop" download="cropped-image.png"></a>
+
           <div class="file-btn-wrapper">
             <button class="file-btn">
               <span>Upload Image</span>
               <input value="Choose a file" type="file" id="dimension_image_upload">
             </button>
           </div>
-          <div class="result-btn-wrapper">
-            <button class="preview-result">Crop Picture</button>
-          </div>
-        </div>
-        
-        <div class="row">
-          <a class="download-crop" download="cropped-image.png"></a>
           
           <div class="resize-select-wrapper">
             <select name="resize-select" id="resize-select" class="u-full-width">
@@ -80,6 +76,9 @@
       <div class="row">
         <div id="upload-croppie"></div>
         <div class="upload-msg"></div>
+      </div>
+      <div class="result-btn-wrapper">
+        <button class="preview-result">Crop Image</button>
       </div>
     </div>
   </body>

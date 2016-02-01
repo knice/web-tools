@@ -34,7 +34,7 @@ $(document).ready(function() {
 
         reader.readAsDataURL(input.files[0]);
       } else {
-        alert("Unless you pressed cancel, your browser doesn't support the FileReader API");
+        swal("Unless you pressed cancel, your browser doesn't support the FileReader API");
       }
     }
 
@@ -111,6 +111,10 @@ $(document).ready(function() {
         location.reload();
       });
     }
+
+    this.popupInstructions = function() {
+      swal('Upload an image you wish to resize, then either select one of the preset image dimensions from the dropdown menu, or type in a custom width and height.  Drag the image around until you find the crop you desire.  You can also scale the size of the image with the slider at the bottom.  When you are satisfied with how it looks, click "Crop Image."');
+    }
   }
 
   $.getJSON("options.json", function(json) {
@@ -137,5 +141,13 @@ $(document).ready(function() {
   });
   $(document).on('click', '.submit-btn', function(event) {
     Resize.downloadableResult();
-  })
+  });
+  $(document).on('click', '#instructions', function() {
+    swal({
+      title: "Instructions",
+      text: '<ul><li>Upload an image you wish to resize</li><li>Select preset image dimensions from the dropdown menu, or input a custom width and height</li><li>Drag the image around until you find the crop you desire</li><li>Scale the size of the image with the slider at the bottom, or with your middle mouse button</li><li>When you are satisfied with how it looks, click "Crop Image"</li></ul>',
+      html: true,
+      allowOutsideClick: true
+    });
+  });
 });
