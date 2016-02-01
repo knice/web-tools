@@ -1,108 +1,108 @@
 {
   "Cascade": {
-    "Right Callout": {
+    "Right Callout (206 x Custom)": {
       "width": "206",
       "height": ""
     },
-   "Primary WYSIWYG General": {
+   "Primary WYSIWYG General (206 x Custom)": {
       "width": "206",
       "height": ""
     },
-    "Primary Carousel Region": {
+    "Primary Carousel Region (960 x 540)": {
       "width": "960",
       "height": "540"
     },
-    "Primary Personnel Region": {
+    "Primary Personnel Region (120 x 150)": {
       "width": "120",
       "height": "150"
     },
-    "Primary Funnel 1up": {
+    "Primary Funnel 1up (200 x 150)": {
       "width": "200",
       "height": "150"
     },
-    "Primary Funnel 2up": {
+    "Primary Funnel 2up (290 x 125)": {
       "width": "290",
       "height": "125"
     },
-    "Primary & Right Sponsor Box": {
+    "Primary & Right Sponsor Box (114 x 110)": {
       "width": "114",
       "height": "110"
     },
-    "Primary & Left Featured Area": {
+    "Primary & Left Featured Area (125 x 135)": {
       "width": "125",
       "height": "135"
     },
-    "Masthead Slider": {
+    "Masthead Slider (1130 x 440)": {
       "width": "1130",
       "height": "440"
     },
-    "Masthead Boxes": {
+    "Masthead Boxes (266 x 220)": {
       "width": "266",
       "height": "220"
     },
-    "Masthead Branded": {
+    "Masthead Branded (1130 x 220)": {
       "width": "1130",
       "height": "220"
     }
   },
   "Events": {
-    "Masthead": {
+    "Masthead (980 x 350)": {
       "width": "980",
       "height": "350"
     },
-    "Description": {
+    "Description (Custom x 206)": {
       "width": "",
       "height": "206"
     }
   },
   "Email": {
-    "Updates Email Image": {
+    "Updates Email Image (270 x 200)": {
       "width": "270",
       "height": "200"
     }
   },
   "Facebook": {
-    "Cover Photo": {
+    "Cover Photo (851 x 315)": {
       "width": "851",
       "height": "315"
     },
-    "Profile Picture": {
+    "Profile Picture (180 x 180)": {
       "width": "180",
       "height": "180"
     },
-    "Image": {
+    "Image (1200 x 1200)": {
       "width": "1200",
       "height": "1200"
     },
-    "Link Image": {
+    "Link Image (1200 x 627)": {
       "width": "1200",
       "height": "627"
     }
   },
   "Twitter": {
-    "Header": {
+    "Header (1500 x 500)": {
       "width": "1500",
       "height": "500"
     },
-    "Profile": {
+    "Profile (400 x 400)": {
       "width": "400",
       "height": "400"
     },
-    "Shared Photo": {
+    "Shared Photo (1024 x 512)": {
       "width": "1024",
       "height": "512"
     }
   },
   "Instagram": {
-    "Profile": {
+    "Profile (161 x 161)": {
       "width": "161",
       "height": "161"
     },
-    "Square": {
+    "Square (612 x 612)": {
       "width": "612",
       "height": "612"
     },
-    "Landscape": {
+    "Landscape (612 x Custom)": {
       "width": "612",
       "height": ""
     }
