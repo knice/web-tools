@@ -111,10 +111,6 @@ $(document).ready(function() {
         location.reload();
       });
     }
-
-    this.popupInstructions = function() {
-      swal('Upload an image you wish to resize, then either select one of the preset image dimensions from the dropdown menu, or type in a custom width and height.  Drag the image around until you find the crop you desire.  You can also scale the size of the image with the slider at the bottom.  When you are satisfied with how it looks, click "Crop Image."');
-    }
   }
 
   $.getJSON("options.json", function(json) {
@@ -133,15 +129,15 @@ $(document).ready(function() {
   $(document).on('change', '#dimension_image_upload', function() { Resize.readFile(this); });
   $(document).on('change', '#resize-select', function() { Resize.fillDimensionFields(this); });
   $(document).on('click', '.preview-result', function() { Resize.showResult(); });
+  $(document).on('click', '.submit-btn', function(event) { Resize.downloadableResult(); });
+
   $(document).on('change', '#user-width, #user-height', function() {
     if($("#user-width").val() > Resize.originalWidth) $("#user-width").val(Resize.originalWidth);
     if($("#user-height").val() > Resize.originalHeight) $("#user-height").val(Resize.originalHeight);
     Resize.resizeCroppie();
     $("#resize-select").val($("#resize-select option:first").val());
   });
-  $(document).on('click', '.submit-btn', function(event) {
-    Resize.downloadableResult();
-  });
+  
   $(document).on('click', '#instructions', function() {
     swal({
       title: "Instructions",
