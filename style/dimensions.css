@@ -127,4 +127,49 @@ button {
   .sweet-alert { left: 20%; }
 }
 
+/* NAV BAR */
+#main-nav {
+  background-color: white;
+  margin: 0 0 32px 0;
+  padding: 0 0 0 8px;
+  height: 35px;
+  font-size: 14px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+#main-nav .brand {
+  float: left;
+  height: 25px;
+  width: 25px;
+  margin-top: 5px;
+}
+
+#main-nav ul {
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+#main-nav ul li {
+  list-style-type: none;
+  display: block;
+  float: left;
+}
+
+#main-nav p,
+#main-nav a {
+  text-decoration: none;
+  color: #353430;
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+  transition: all 150ms;
+}
+
+#main-nav a:hover {
+  background: #E5E5E5;
 }
