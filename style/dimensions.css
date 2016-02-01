@@ -1,3 +1,17 @@
+body {
+  background-color: #EAEAEA;
+  font-family: proxima-nova-soft, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: proxima-nova, sans-serif;
+  font-weight: bold;
+}
+
+button {
+  background-color: #FFF;
+}
+
 .container {
   position: relative;
   max-width: 2000px;
@@ -7,8 +21,12 @@
 }
 
 .title { 
-  text-align: left;
+  text-align: center;
   font-size: 4rem;
+}
+
+.description {
+  text-align: center;
 }
 
 .file-btn { position: relative; }
@@ -25,9 +43,13 @@
 .file-btn-wrapper, .result-btn-wrapper {
   text-align: center;
   display: inline-block;
+  margin: auto;
 }
 
-.resize-select-wrapper { margin-top: 25px; }
+.resize-select-wrapper { 
+  margin-top: 25px;
+  display: inline-block;
+}
 
 .download-crop { display: none; }
 
@@ -35,62 +57,33 @@
   margin: auto;
   padding: 5px 0;
   max-width: 1270px;
+  text-align: center;
 }
-
-.upload-croppie #upload-croppie,
-.upload-croppie.ready .upload-msg {
-  display: none;
-}
-
-.upload-croppie .preview-result { background-color: #CBCAC5; }
 
 .upload-croppie .preview-result:hover {
-  border-color: #BBB;
-  color: #555;
-}
-
-.upload-croppie #user-width,
-.upload-croppie #user-height,
-.upload-croppie #resize-select {
-  background-color: #CBCAC5;
-}
-
-.upload-croppie.ready .preview-result { background-color: #FFF; }
-
-.upload-croppie.ready .preview-result:hover {
   border-color: #888;
   color: #333;
 }
 
-.upload-croppie.ready #user-width,
-.upload-croppie.ready #user-height,
-.upload-croppie.ready #resize-select {
-  background-color: #FFF;
-}
-
-.upload-croppie.ready #user-width,
-.upload-croppie.ready #user-height {
+.upload-croppie #user-width,
+.upload-croppie #user-height {
   width: 188px;
 }
 
-.upload-croppie.ready #upload-croppie { display: block; }
+.upload-croppie #resize-select { width: auto; }
+
+.upload-croppie .preview-result,
+.upload-croppie #resize-select,
+.upload-croppie #user-width,
+.upload-croppie #user-height {
+  display: none;
+}
+
+.upload-croppie #upload-croppie { display: block; }
 
 .upload-croppie.ready .preview-result { display: inline-block; }
 
-.sample-resolution {
-  font-weight: 100;
-  font-size: 12px;
-}
-
-.upload-msg {
-  text-align: center;
-  padding: 50px;
-  font-size: 22px;
-  color: #aaa;
-  margin: 50px auto;
-  border: 1px solid #aaa;
-  width: 300px;
-}
+.upload-msg { width: 300px; }
 
 .sweet-alert { 
   width: 85%;
@@ -107,9 +100,9 @@
   .upload-msg { width: 300px; }
   .sweet-alert { left: 40%; }
 
-  .file-btn-wrapper, .result-btn-wrapper {
+  /*.file-btn-wrapper, .result-btn-wrapper {
     text-align: left;
-  }
+  }*/
 }
 
 @media (min-width: 650px) {
@@ -132,4 +125,6 @@
 
 @media (min-width: 1600px) {
   .sweet-alert { left: 20%; }
+}
+
 }

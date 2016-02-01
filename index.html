@@ -13,45 +13,44 @@
     <script src="js/croppie.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
     <script src="js/dimensions.js"></script>
+
+    <script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
     <div class="container upload-croppie">
+      <h1 class="title">Chapman Image Resizing</h1>
+      <p class="description">Your one stop shop for all things related to image resizing on the Chapman University website network</p>
       <div class="row actions">
-        <div class="five columns">
-          <div class="row">
-            <h1 class="title">Chapman Image Resizing</h1>
-            <div class="file-btn-wrapper">
-              <button class="file-btn">
-                <span>Upload Image</span>
-                <input value="Choose a file" type="file" id="dimension_image_upload">
-              </button>
-            </div>
-            
-            <a class="download-crop" disabled="true" download="cropped-image.png"></a>
+        <div class="row">
+          <div class="file-btn-wrapper">
+            <button class="file-btn">
+              <span>Upload Image</span>
+              <input value="Choose a file" type="file" id="dimension_image_upload">
+            </button>
+          </div>
+          <div class="result-btn-wrapper">
+            <button class="preview-result">Crop Picture</button>
           </div>
         </div>
         
-        <div class="seven columns">
+        <div class="row">
+          <a class="download-crop" download="cropped-image.png"></a>
+          
           <div class="resize-select-wrapper">
-            <select name="resize-select" id="resize-select" class="u-full-width" disabled="true">
-              <option disabled selected> -- Select a Preset Option -- </option>
+            <select name="resize-select" id="resize-select" class="u-full-width">
+              <option selected> -- Select a Preset Option -- </option>
             </select>
           </div>
 
-          <div class="row">
-              <input id="user-width" disabled="true" type="number" min="0" placeholder="Custom Width" name="width">
-              <input id="user-height" disabled="true" type="number" min="0" placeholder="Custom Height" name="height">
-              <div class="result-btn-wrapper">
-                <button class="preview-result" disabled="true">Crop Picture</button>
-              </div>
-          </div>
+          <input id="user-width" type="number" min="0" placeholder="Custom Width" name="width">
+          <input id="user-height" type="number" min="0" placeholder="Custom Height" name="height">
         </div>
+
       </div>
       <div class="row">
-        <div class="upload-msg">
-          Upload a file and set dimensions to start cropping
-        </div>
-        <div id="upload-croppie"></div><br />
+        <div id="upload-croppie"></div>
+        <div class="upload-msg"></div>
       </div>
     </div>
   </body>
