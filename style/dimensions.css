@@ -68,6 +68,11 @@
   background-color: #FFF;
 }
 
+.upload-croppie.ready #user-width,
+.upload-croppie.ready #user-height {
+  width: 188px;
+}
+
 .upload-croppie.ready #upload-croppie { display: block; }
 
 .upload-croppie.ready .preview-result { display: inline-block; }
