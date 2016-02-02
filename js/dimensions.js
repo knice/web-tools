@@ -138,12 +138,13 @@ $(document).ready(function() {
     $("#resize-select").val($("#resize-select option:first").val());
   });
   
-  $(document).on('click', '#instructions', function() {
+  $(document).on('click', '#instructions', function(event) {
     swal({
       title: "Instructions",
       text: '<ul><li>Upload an image you wish to resize</li><li>Select preset image dimensions from the dropdown menu, or input a custom width and height</li><li>Drag the image around until you find the crop you desire</li><li>Scale the size of the image with the slider at the bottom, or with your middle mouse button</li><li>When you are satisfied with how it looks, click "Crop Image"</li></ul>',
       html: true,
       allowOutsideClick: true
     });
+    event.preventDefault();
   });
 });

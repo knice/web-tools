@@ -44,6 +44,8 @@ button {
   margin: auto;
 }
 
+.result-btn-wrapper { margin-bottom: 275px; }
+
 .resize-select-wrapper { display: inline-block; }
 
 .download-crop { display: none; }
@@ -60,10 +62,7 @@ button {
   color: #FFF;
 }
 
-.upload-croppie .preview-result:hover {
-  border-color: #888;
-  /*color: #333;*/
-}
+.upload-croppie .preview-result:hover { border-color: #888; }
 
 .upload-croppie #user-width,
 .upload-croppie #user-height {
