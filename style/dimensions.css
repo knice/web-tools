@@ -147,6 +147,10 @@ button {
   .sweet-alert { left: 20%; }
 }
 
+@media (min-width: 1900px) {
+  .sweet-alert { left: 15%;  }
+}
+
 /* NAV BAR */
 #main-nav {
   background-color: white;
