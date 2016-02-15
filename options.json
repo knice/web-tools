@@ -61,6 +61,16 @@
       "height": "200"
     }
   },
+  "Blogs": {
+    "Small Featured (740 x 410)": {
+      "width": "740",
+      "height": "410"
+    },
+    "Blog Header (1680 x 275)": {
+      "width": "1680",
+      "height": "275"
+    }
+  },
   "Facebook": {
     "Cover Photo (851 x 315)": {
       "width": "851",
