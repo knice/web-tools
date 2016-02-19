@@ -80,13 +80,21 @@
       "width": "180",
       "height": "180"
     },
-    "Image (1200 x 1200)": {
-      "width": "1200",
-      "height": "1200"
+    "Image (470 x 470)": {
+      "width": "470",
+      "height": "470"
     },
-    "Link Image (1200 x 627)": {
-      "width": "1200",
-      "height": "627"
+    "Link Image (470 x 246)": {
+      "width": "470",
+      "height": "246"
+    },
+    "Portrait (Custom x 470)": {
+      "width": "",
+      "height": "470"
+    },
+    "Landscape (470 x Custom)": {
+      "width": "470",
+      "height": ""
     }
   },
   "Twitter": {
@@ -98,9 +106,9 @@
       "width": "400",
       "height": "400"
     },
-    "Shared Photo (1024 x 512)": {
-      "width": "1024",
-      "height": "512"
+    "Shared Photo (440 x 220)": {
+      "width": "440",
+      "height": "220"
     }
   },
   "Instagram": {
@@ -108,12 +116,16 @@
       "width": "161",
       "height": "161"
     },
-    "Square (612 x 612)": {
-      "width": "612",
-      "height": "612"
+    "Square (1080 x 1080)": {
+      "width": "1080",
+      "height": "1080"
     },
-    "Landscape (612 x Custom)": {
-      "width": "612",
+    "Portrait (Custom x 1080)": {
+      "width": "",
+      "height": "1080"
+    },
+    "Landscape (1080 x Custom)": {
+      "width": "1080",
       "height": ""
     }
   }
