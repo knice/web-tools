@@ -43,6 +43,14 @@
     "Masthead Branded (1130 x 220)": {
       "width": "1130",
       "height": "220"
+    },
+    "Faculty Headshots Small (110 x 130)": {
+      "width": "110",
+      "height": "130"
+    },
+    "Faculty Headshots Large (195 x Custom)": {
+      "width": "195",
+      "height": ""
     }
   },
   "Events": {
