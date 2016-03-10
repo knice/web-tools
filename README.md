@@ -1,7 +1,7 @@
-# ChapmanU Dimensions
-The one stop shop for all things related to image resizing on the Chapman University website network
-
-Located at [dimensions.chapman.edu](http://dimensions.chapman.edu).
+#UC Santa Cruz Dimensions
+A tool for image resizing for all UCSC websites.
 
 ### Development Environment Setup
 This is as simple as it gets. Clone the repository locally, navigate to the project folder, and run `php -S localhost:8000`
+
+Written originally for Chapman University, which can be found on [gitHub](https://github.com/chapmanu/dimensions). Their website is at [dimensions.chapman.edu](http://dimensions.chapman.edu).

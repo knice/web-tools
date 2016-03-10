@@ -1,6 +1,6 @@
 {
   "Email": {
-    "Banner (622 x 200)": {
+    "Home Page Banner (622 x 200)": {
       "width": "622",
       "height": "200"
     },
@@ -34,13 +34,13 @@
       "width": "778",
       "height": "311"
     },
-    "Thumnail (72 x 72)": {
-      "width": "72",
-      "height": "72"
-    },
-    "Thumnail #2 (80 x 80)": {
+    "Thumnail (80 x 80)": {
       "width": "80",
       "height": "80"
+    },
+    "News Thumnail (48 x 48)": {
+      "width": "48",
+      "height": "48"
     },
     "Sidebar Image (305 x 116)": {
       "width": "305",
@@ -57,10 +57,6 @@
     "Square Image (324 x 324)": {
       "width": "324",
       "height": "324"
-    },
-    "News Thumnail (48 x 48)": {
-      "width": "48",
-      "height": "48"
     },
     "Faculty Profile (146 x 219)": {
       "width": "146",
