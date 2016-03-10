@@ -2,13 +2,14 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Does these need to change? -->
     <meta property="og:site_name" content="Dimensions.Chapman">
     <meta property="og:url" content="https://dimensions.chapman.edu/">
-    <meta property="og:description" content="Crop your images so that they look great on Chapman's websites.">
+    <meta property="og:description" content="Tool to crop images for UC Santa Cruz websites">
 
-    <title>Dimensions</title>
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-
+    <title>UCSC Dimensions</title>
+    
+    <link href="http://www.ucsc.edu/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" href="style/croppie.min.css">
     <link rel="stylesheet" type="text/css" href="style/sweetalert.css">
     <link rel="stylesheet" type="text/css" href="style/skeleton.min.css">
@@ -24,38 +25,14 @@
   </head>
   <body>
     <nav id="main-nav">
-      <svg width="31px" class="brand" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-          <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
-          <title>chapman_logo_horizonal_stacked</title>
-          <desc>Created with Sketch.</desc>
-          <defs></defs>
-          <g id="Slides" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-              <g id="Signs--::--Index" sketch:type="MSArtboardGroup" transform="translate(-12.000000, -12.000000)" fill="#98002E">
-                  <g id="chapman_logo_horizonal_stacked" sketch:type="MSLayerGroup" transform="translate(12.000000, 12.000000)">
-                      <g id="Layer_1" sketch:type="MSShapeGroup">
-                          <g id="Group">
-                              <g id="Shape">
-                                  <path d="M14.1311089,15.77652 L0,29.9030822 L0,15.77652 L14.1311089,15.77652 Z"></path>
-                                  <path d="M0,14.87008 L0,0.740004444 L14.1311089,14.87008 L0,14.87008 Z"></path>
-                                  <path d="M29.8047089,0.101817778 L15.6746333,14.2298956 L15.6746333,0.101817778 L29.8047089,0.101817778 Z"></path>
-                                  <path d="M14.77026,14.2298956 L0.640184444,0.101817778 L14.77026,0.101817778 L14.77026,14.2298956 Z"></path>
-                                  <path d="M16.3148178,14.87008 L30.4443422,0.740004444 L30.4443422,14.87008 L16.3148178,14.87008 Z"></path>
-                                  <path d="M30.4443422,15.77652 L30.4443422,29.9030822 L16.3148178,15.77652 L30.4443422,15.77652 Z"></path>
-                                  <path d="M14.77026,16.4137422 L0.640184444,30.5422333 L14.77026,30.5422333 L14.77026,16.4137422 Z"></path>
-                                  <path d="M15.6746333,16.4137422 L15.6746333,30.5422333 L29.8026422,30.5422333 L15.6746333,16.4137422 Z"></path>
-                              </g>
-                          </g>
-                      </g>
-                  </g>
-              </g>
-          </g>
-      </svg>
-      <p>Dimensions</p>
+        <!-- UCSC Logo could go here -->
+      <img src="favicon.ico" style="width:25px;height:25px;margin-top:5px;position:fixed;">
+      <p style="margin-left:20px">UCSC Dimensions</p>
     </nav>
     <div class="container upload-croppie">
-      <h1 class="title">Chapman Image Resizing</h1>
+      <h1 class="title">UCSC Image Resizing</h1>
       <div class="row actions">
-        <p class="description">Crop your images so that they look great on Chapman's websites. <a id="instructions" href="#">Read instructions</a></p>
+        <p class="description">Tool to crop images for UC Santa Cruz websites. <a id="instructions" href="#">Read instructions</a></p>
 
         <div class="file-btn-wrapper">
           <input class="file-btn" value="Choose a file" name="file" type="file" id="dimension_image_upload">

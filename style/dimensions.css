@@ -50,7 +50,7 @@ button {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  background-color: #A82439;
+  background-color: #00458c;
   color: #FFF;
 }
 
@@ -82,7 +82,7 @@ button {
 }
 
 .upload-croppie .preview-result {
-  background-color: #A82439;
+  background-color: #00458c;
   color: #FFF;
 }
 
