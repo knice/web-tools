@@ -1,5 +1,5 @@
 var canvasBox = document.getElementById("canvas");
-var val = 'blue';
+var val = "blue";
 canvasBox.style.background = "#00458c";
 var ctx = canvasBox.getContext("2d");
 var canvasWidth = 320;
