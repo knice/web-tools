@@ -113,7 +113,7 @@ $(document).ready(function() {
     }
   }
 
-  $.getJSON("dimensions/options.json", function(json) {
+  $.getJSON("dimensions/dimensions/options.json", function(json) {
     var html = "";
     for(var group in json){
       html += "<optgroup label='" + group + "'>";
