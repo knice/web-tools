@@ -43,10 +43,10 @@ function render(renderText) {
   
   if (canvasWidth < maxLength) {
     canvasFill(canvasWidth);
-    ctx.fillText(renderText, canvasWidth/2, 32);
+    ctx.fillText(renderText, canvasWidth/2, 34);
   } else {
     canvasFill(maxLength);
-    ctx.fillText("NAME IS TOO LONG", 160, 32);
+    ctx.fillText("TEXT IS TOO LONG", 160, 34);
   }
   ctx.restore();
 }
@@ -79,7 +79,7 @@ function canvasFill(canWidth) {
   ctx.fill();
   ctx.save();
   ctx.textAlign="center";
-  ctx.font = "lighter 18px Helvetica, Arial, -system, sans-serif";
+  ctx.font = "400 20px Oswald, Arial, -system, sans-serif";
   if(val == 'blue') {
     ctx.fillStyle = "white";
   } else if (val == 'gold') {

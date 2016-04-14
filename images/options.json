@@ -1,6 +1,6 @@
 {
   "Email": {
-    "Home Page Banner (622 x 200)": {
+    "Banner (622 x 200)": {
       "width": "622",
       "height": "200"
     },
@@ -16,7 +16,7 @@
       "width": "195",
       "height": "140"
     },
-    "Thumnail (75 x 75)": {
+    "Thumbnail (75 x 75)": {
       "width": "75",
       "height": "75"
     },
@@ -34,25 +34,17 @@
       "width": "778",
       "height": "311"
     },
-    "Thumnail (80 x 80)": {
+    "Square Thumbnail (80 x 80)": {
       "width": "80",
       "height": "80"
-    },
-    "News Thumnail (48 x 48)": {
-      "width": "48",
-      "height": "48"
     },
     "Sidebar Image (305 x 116)": {
       "width": "305",
       "height": "116"
     },
-    "Article Preview (300 x 130)": {
+    "Article Standard (300 x 130)": {
       "width": "300",
       "height": "130"
-    },
-     "Square Article Preview (156 x 156)": {
-      "width": "156",
-      "height": "156"
     },
     "Square Image (324 x 324)": {
       "width": "324",
