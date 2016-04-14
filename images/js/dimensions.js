@@ -41,9 +41,11 @@ $(document).ready(function() {
     this.showResult = function() {
       $uploadCrop.result({
         type: 'canvas', 
-        size: 'viewport'
+        size: 'viewport',
+        format: 'jpeg',
+        quality: 0.8
       }).then(function(img) {
-        $(".download-crop").prop('href', img);
+        $("#download-crop").prop('href', img);
         Resize.popupResult({
           src: img
         });
@@ -94,20 +96,21 @@ $(document).ready(function() {
       }
       if (result.src) {
         html = '<img src="' + result.src + '" />';
-        html += '<a href="' + result.src + '" style="display:none; id="download-crop" download="cropped-image.png"></a>';
+        html += '<a href="' + result.src + '" style="display:none;" id="download-crop" download="cropped-image.jpg">Save this image</a>';
       }
       swal({
+        animation: 'slide-from-top',
         title: 'Your Cropped Image',
         html: true,
         text: html,
         allowOutsideClick: true,
         showCancelButton: true,
         cancelButtonText: "Back",
-        confirmButtonColor: "#A82439",
+        confirmButtonColor: "#00458c",
         confirmButtonText: "Download"
       },
       function(){
-        $(".download-crop")[0].click();
+        $("#download-crop")[0].click();
         location.reload();
       });
     }

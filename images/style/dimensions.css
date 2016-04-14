@@ -112,7 +112,7 @@ button {
 }
 .sweet-alert button { padding: 0 30px; }
 .sweet-alert button:focus { color: #FFF; }
-.sweet-alert button:hover { color: #333; }
+.sweet-alert button:hover { color: #ffc500; }
 .sweet-alert ul {
   text-align: left;
   display: inline-block;
