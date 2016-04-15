@@ -97,9 +97,10 @@ $(document).ready(function() {
       if (result.src) {
         html = '<img src="' + result.src + '" />';
         html += '<a href="' + result.src + '" style="display:none;" id="download-crop" download="cropped-image.jpg">Save this image</a>';
+        html += '<p style="margin-top:1em;font-size:1.25em;"><b>Safari users:</b> Right-click the image above above and "Save as..." to your computer.</p>';
       }
       swal({
-        animation: 'slide-from-top',
+        animation: 'pop',
         title: 'Your Cropped Image',
         html: true,
         text: html,
@@ -111,7 +112,7 @@ $(document).ready(function() {
       },
       function(){
         $("#download-crop")[0].click();
-        location.reload();
+        //location.reload();
       });
     }
   }
