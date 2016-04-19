@@ -31,6 +31,14 @@
     "News Article Landscape (500 x 320)": {
       "width": "500",
       "height": "320"
+    },
+    "Image Gallery Portrait (570 x 875)": {
+      "width": "570",
+      "height": "875"
+    },
+    "Image Gallery Landscape (600 x 460)": {
+      "width": "600",
+      "height": "460"
     }
   },
   "Email": {
