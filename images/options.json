@@ -39,6 +39,14 @@
     "Image Gallery Landscape (600 x 460)": {
       "width": "600",
       "height": "460"
+    },
+    "Callout Portrait (400 x 415)": {
+      "width": "400",
+      "height": "415"
+    },
+    "Callout Landscape (400 x 240)": {
+      "width": "400",
+      "height": "240"
     }
   },
   "Email": {
