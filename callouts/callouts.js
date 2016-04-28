@@ -50,7 +50,6 @@ $('#img').val('selectedvalue').change(function() {
 //Checks the caption input and changes the caption
 $('.editable').bind("keyup blur paste", function() {
   html5 = document.getElementById('caption').innerHTML;
-  if(html5.indexOf('<br>') >= 0) html5.replace('<br>', 'Add your caption');
   endHtml();
 });
 
