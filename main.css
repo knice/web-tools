@@ -1,10 +1,11 @@
-h1, h3, p, a {
+h1, h3, p {
 	padding-left: 20px;
 }
 
-a, .button {
-	width: 240px;
-	border-radius: 7px;
-	font-weight: bold;
-	background-color: #00458c;
+span {
+	font-size: 125%;
+}
+
+span a:hover {
+	text-decoration: none;
 }
