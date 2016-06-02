@@ -9,22 +9,12 @@
   <link rel="stylesheet" type="text/css" href="https://static.ucsc.edu/_responsive/css/ucsc.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 
+  <script src="../jquery-1.12.0.min.js"></script>
+
 </head>
 <body>
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <ul class="menu">
-        <li class="menu-text">
-          <a href="/">Web Tools</a>
-        </li>
-        <li><a href="images/">Image Resizer</a></li>
-        <li><a href="buttons/">Button Builder</a></li>
-        <li><a href="giving-buttons/">Giving Button Builder</a></li>
-        <li><a href="callouts/">Callout Box Builder</a></li>
-        <li><a href="http://www.ucsc.edu/identity/emailmarketing/images/banners/">Banner Builder</a></li>
-      </ul>
-    </div>
-  </div>
+
+  <div id="menu"></div>
 
   <h1>Web Tools for UC Santa Cruz</h1>
   <h3 class="subheader">Images, Buttons, Banners, and Callout Boxes</h3>
@@ -37,6 +27,12 @@
   <p><span><a href="giving-buttons/">Giving Button Builder</a></span> A tool to generate giving buttons for donations.</p>
   <p><span><a href="callouts/">Callout Box Builder</a></span> A tool to generate callout boxes for UCSC articles.</p>
   <p><span><a href="http://www.ucsc.edu/identity/emailmarketing/images/banners/">Email Banner Builder</a></span> A tool to generate email banners for UCSC emails.
+
+  <script>
+    $(function() {
+      $("#menu").load("menu.html");
+    });
+  </script>
 
 </body>
 </html>

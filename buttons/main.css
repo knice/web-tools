@@ -13,7 +13,7 @@ p {
   display: inline-block;
 }
 
-a {
+#downloadLink {
   margin-top: 20px;
   font-size: 100%;
   color: #2199e8;

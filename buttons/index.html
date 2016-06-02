@@ -16,7 +16,9 @@
 </head>
 <body>
 
-<div class="box">
+  <div id="menu"></div>  
+
+  <div class="box">
   <div class="row">
     <h1>Button <small>Builder tool</small></h1>
   </div>
@@ -36,6 +38,13 @@
     <br> If Using Safari: Click "Download Button", click the image and drag it onto your desktop.
     <br> If Using Chrome: The image will download to your downloads folder as "button.png".
   </p>
-</div>
+  </div>
 
+  <script>
+    $(function() {
+      $("#menu").load("../menu.html");
+    });
+  </script>
+
+</body>
 </html>
