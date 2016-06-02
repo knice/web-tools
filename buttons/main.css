@@ -1,15 +1,3 @@
-a, h1, form, p {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: lighter;
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0;
-  line-height: 1.4;
-}
-
 .box {
   margin: 1em auto;
   width: 640px;  
@@ -43,12 +31,6 @@ a {
   margin: 0 0 1rem;
   font-size: 1rem;
   padding: 0.5rem;
-  transition: box-shadow .5s, border-color .25s ease-in-out;
-}
-
-input:focus{
-  border: 1px solid #8a8a8a;
-  box-shadow: 0 0 5px #cacaca;
 }
 
 .color-box {
