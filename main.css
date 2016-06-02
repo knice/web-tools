@@ -1,0 +1,10 @@
+h1, h3, p, a {
+	padding-left: 20px;
+}
+
+a, .button {
+	width: 240px;
+	border-radius: 7px;
+	font-weight: bold;
+	background-color: #00458c;
+}
