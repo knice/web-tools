@@ -20,7 +20,7 @@
 
   <div class="box">
   <div class="row">
-    <h1>Button <small>Builder tool</small></h1>
+    <h1>Button <small>builder tool</small></h1>
   </div>
   <input type="text" id="buttonText" placeholder="Button Text"/>
   <div class="color-box">
@@ -32,12 +32,62 @@
   </div>
   <canvas id="canvas" width="120px" height="50px"></canvas>
   <br>
-  <a id="downloadLink" download="button.png">Download button</a>
+  <p><a id="downloadLink" download="button.png">Download button</a></p>
+  <h4>To download:</h4> 
+ <ul>   
+     <li>Safari: Click "Download button", click the image and drag it onto your desktop.</li>
+     <li>Chrome: The image will download to your downloads folder as "button.png".</li>
+  </ul>
+  </div>
+
+  <script>
+    $(function() {
+      $("#menu").load("../menu.html");
+    });
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Web tools: Buttons - UC Santa Cruz</title>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css">
+  <link rel="stylesheet" type="text/css" href="https://static.ucsc.edu/_responsive/css/ucsc.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  
+  <script src="../jquery-1.12.0.min.js"></script>
+  <script src="button_builder.js" defer></script>
+
+</head>
+<body>
+
+  <div id="menu"></div>  
+
+  <div class="box">
+  <div class="row">
+    <h1>Button <small>builder tool</small></h1>
+  </div>
+  <input type="text" id="buttonText" placeholder="Button Text"/>
+  <div class="color-box">
+    <div>Color scheme:</div>
+    <input type="radio" name="color" checked="checked" value="blue" id="blue"/>
+    <label for="blue">Blue and white</label><br>
+    <input type="radio" name="color" value="gold" id="gold"/> 
+    <label for="gold">Gold and blue</label>
+  </div>
+  <canvas id="canvas" width="120px" height="50px"></canvas>
   <br>
-  <p><strong>To Download:</strong> 
-    <br> If using Safari: Click "Download button", click the image and drag it onto your desktop.
-    <br> If using Chrome: The image will download to your downloads folder as "button.png".
-  </p>
+  <p><a id="downloadLink" download="button.png">Download button</a></p>
+  <h4>To download:</h4> 
+ <ul>   
+     <li>Safari: Click "Download button", click the image and drag it onto your desktop.</li>
+     <li>Chrome: The image will download to your downloads folder as "button.png".</li>
+  </ul>
   </div>
 
   <script>
