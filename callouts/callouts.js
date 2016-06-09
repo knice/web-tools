@@ -36,7 +36,7 @@ $(document).ready(function(){
   //Checks the headline input and changes the headline
   $('#headline').bind("keyup blur paste", function() {
     var temp = $(this).val();
-    if (temp == '') temp = "Add your headline";
+    if (temp == '') temp = "Your headline";
     html3 = "<h3>" + temp + "</h3>";
     endHtml();
   });

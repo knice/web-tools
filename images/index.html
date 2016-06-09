@@ -20,15 +20,9 @@
 
   </head>
   <body>
-    <nav id="main-nav">
-      <!-- UCSC Logo could go here -->
+    <nav id="main-nav">      
       <img src="http://www.ucsc.edu/favicon.ico" style="width:25px;height:25px;margin-top:5px;position:fixed;">
-      <p style="margin-left:20px">UC Santa Cruz</p>
-      <a href="images/">Image Resizer</a>
-      <a href="buttons/">Button Builder</a>
-      <a href="giving-buttons/">Giving Button Builder</a>
-      <a href="callouts/">Callout Box Builder</a>
-      <a href="http://www.ucsc.edu/identity/emailmarketing/images/banners/">Banner Builder</a>
+      <p style="margin-left:20px"><a href="../">&larr; UC Santa Cruz web tools</a></p>
     </nav>
     <div class="container upload-croppie">
       <h1 class="title">Let's crop and resize an image</h1>
@@ -39,10 +33,6 @@
           <input class="file-btn" value="Choose a file" name="file" type="file" id="dimension_image_upload">
           <label for="dimension_image_upload">Upload Image</label>
         </div>
-      </div>
-      <div class="row">
-        <div id="upload-croppie"></div>
-        <div class="upload-msg"></div>
       </div>
       <div class="row actions">
         <a class="download-crop" download="cropped-image.png"></a>
@@ -55,6 +45,11 @@
 
         <input id="user-width" type="number" min="0" placeholder="Custom Width" name="width">
         <input id="user-height" type="number" min="0" placeholder="Custom Height" name="height">
+      </div>
+
+      <div class="row">
+        <div id="upload-croppie"></div>
+        <div class="upload-msg"></div>
       </div>
       <div class="result-btn-wrapper">
         <button class="preview-result">Crop Image</button>
