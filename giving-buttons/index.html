@@ -5,15 +5,20 @@
 	<title>Web Tools: Giving Buttons - UC Santa Cruz</title>
 	<meta charset="UTF-8">
 
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/foundation/5.5.0/css/foundation.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css">
 	<link rel="stylesheet" type="text/css" href="https://static.ucsc.edu/_responsive/css/ucsc.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="../main.css">
 
 	<script src="../jquery-1.12.0.min.js"></script>
 	<script src="giving-buttons.js"></script>
 	
 </head>
 <body>
+
+	<div id="menu"></div>
+
+<div class="container">
+
 	<div class="row">
 	   <h1>Make a Gift <small>Button tool</small></h1>
 	</div>
@@ -36,6 +41,16 @@
 	<div class="row">
 		<h3>Button preview</h3> 
 		<p class="preview"><a href="https://securelb.imodules.com/s/1069/index.aspx?sid=1069&gid=1&pgid=761&cid=1722"><img class="btn no-border" src="http://www.ucsc.edu/images/make-a-gift.png" alt="Make a Gift" /></a></p>
-	</div>   
-</body>
+	</div>  
 
+</div>
+
+  <script>
+    $(function() {
+      $("#menu").load("../menu.html");
+    });
+  </script>
+
+
+</body>
+</html>
