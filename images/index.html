@@ -1,29 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Does these need to change? -->
-    <meta property="og:description" content="Tool to crop images for UC Santa Cruz websites">
-
-    <title>Image cropping and resizing for UC Santa Cruz websites and email</title>
-    
-    <link href="http://www.ucsc.edu/favicon.ico" rel="shortcut icon">
-    <link rel="stylesheet" type="text/css" href="style/croppie.css">
-    <link rel="stylesheet" type="text/css" href="style/sweetalert.css">
-    <link rel="stylesheet" type="text/css" href="style/skeleton.min.css">
-    <link rel="stylesheet" type="text/css" href="style/dimensions.css">
-
-    <script src="../jquery-1.12.0.min.js"></script>
-    <script src="js/croppie.min.js"></script>
-    <script src="js/sweetalert.min.js"></script>
-    <script src="js/dimensions.js"></script>
-
-  </head>
-  <body>
-    <nav id="main-nav">      
-      <img src="http://www.ucsc.edu/favicon.ico" style="width:25px;height:25px;margin-top:5px;position:fixed;">
-      <p style="margin-left:20px"><a href="../">&larr; UC Santa Cruz web tools</a></p>
-    </nav>
+---
+layout: tool_base
+title: "Image cropping and resizing for UC Santa Cruz websites and email"
+included_js: 
+- js/croppie.min.js
+- js/sweetalert.min.js
+- js/dimensions.js
+included_css:
+- style/croppie.css
+- style/sweetalert.css
+- style/skeleton.min.css
+- style/dimensions.css
+- https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css
+---
     <div class="container upload-croppie">
       <h1 class="title">Let's crop and resize an image</h1>
       <div class="row actions">
@@ -55,5 +43,4 @@
         <button class="preview-result">Crop Image</button>
       </div>
     </div>
-  </body>
-</html>
+

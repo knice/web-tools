@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <title>Web tools: Buttons - UC Santa Cruz</title>
-  <meta charset="UTF-8">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css">
-  <link rel="stylesheet" type="text/css" href="https://static.ucsc.edu/_responsive/css/ucsc.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-  <link rel="stylesheet" type="text/css" href="main.css">
-  
-  <script src="../jquery-1.12.0.min.js"></script>
-  <script src="button_builder.js" defer></script>
-
-</head>
-<body>
-
-  <div id="menu"></div>  
+---
+layout: tool_base
+title: "Web tools: Buttons - UC Santa Cruz"
+included_js: 
+- button_builder.js
+included_css:
+- https://cdn.jsdelivr.net/foundation/6.1.1/foundation.min.css
+- https://fonts.googleapis.com/css?family=Oswald
+- main.css
+--- 
 
   <div class="box">
   <div class="row">
@@ -39,13 +30,3 @@
      <li>Chrome: The image will download to your downloads folder as "button.png".</li>
   </ul>
   </div>
-
-  <script>
-    $(function() {
-      $("#menu").load("../menu.html");
-    });
-  </script>
-
-</body>
-
-</html>
