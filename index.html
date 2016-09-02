@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <meta charset="UTF-8">
-  <title>Web Tools for UC Santa Cruz</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.css">
-  <link rel="stylesheet" type="text/css" href="https://static.ucsc.edu/_responsive/css/ucsc.css">
-  <link rel="stylesheet" type="text/css" href="main.css">
-
-  <script src="../jquery-1.12.0.min.js"></script>
-
-</head>
-<body>
-
+---
+layout: default
+---
 <div class="container">
 
   <div class="row">
@@ -26,11 +13,21 @@
       <li><a href="giving-buttons/">Giving Button Builder</a><p>A tool to generate giving buttons for web pages.</p></li>
       <li><a href="callouts/">Callout Box Builder</a><p>A tool to generate callout boxes for WCMS web pages.</p></li>
       <li><a href="http://www.ucsc.edu/identity/emailmarketing/images/banners/">Email Banner Builder</a> <p>A tool to generate email banners for UCSC emails.</p></li>
-      <li><a href="changelog/">Changelog</a> <p>A list of posts detailing updates to this site</p></li>
     </ul>
   </div>
 
-</div>
+  <hr/>
 
-</body>
-</html>
+  <div class="row">
+      <h2> Changelog</h2>
+      <p>A list of posts detailing updates to this site</p>
+      <ul>
+        {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date_to_long_string }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+  </div>
+
+</div>
