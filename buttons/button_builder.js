@@ -5,7 +5,7 @@ var ctx = canvasBox.getContext("2d");
 var canvasWidth = 320;
 var canvasHeight = 50;
 var cornerRadius = 10;
-var maxLength = 320;
+var maxLength =450;
 
 // Checks which color is selected and changes val accordingly
 $('input:radio[name=color]').change(function() {
