@@ -22,7 +22,6 @@ button {
 
 .title { 
   text-align: center;
-  font-size: 4rem;
 }
 
 .description { text-align: center; }
@@ -81,9 +80,14 @@ button {
   text-align: center;
 }
 
+.upload-croppie {
+  margin: 1em auto;
+}
+
 .upload-croppie .preview-result {
   background-color: #00458c;
   color: #FFF;
+  padding: 10px;
 }
 
 .upload-croppie .preview-result:hover { border-color: #888; }
